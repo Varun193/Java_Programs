@@ -16,7 +16,7 @@ public class LSA2DArray {
 				{ 32, 67, 89 } 
 				};
 
-		int target = 89; // element need to be searched
+		int target = 100; // element need to be searched
 
 		int[] search = search(input, target);
 		String ans = Arrays.toString(search);
@@ -26,12 +26,17 @@ public class LSA2DArray {
 
 	}
 	
-	static int[] search(int input [][], int target) {
+	static int[] search(int inp [][], int target) {
+		
+		
 	
-		  for(int row=0; row<input.length; row++ ) {
-			  for(int col=0; col<input[row].length; col++) {
+		  for(int row=0; row<inp.length; row++ ) {
+			  for(int col=0; col<inp[row].length; col++) {
+				  if(inp[row][col]==target) {
+					  return new int[] {row,col};
+				  }
 				   
-				 return new int[] {row,col};
+				
 			  }
 		  }
 		return new int[]{-1,-1};
