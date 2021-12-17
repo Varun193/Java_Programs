@@ -6,11 +6,14 @@ public class LSAEvenDigitNumbers {
 
 		// {10,23,330,4846,587324} 10,4846,10,23,330,4846,587324 contains even number of digits so return as 3
 
-		int[] input = { 10, 2, 330, 4846, 587324 };
+		int[] input = { 10, 2, 330, 4846, 587324,-21 };
 		returnEvenDigit(input);
 	}
 
 	static void returnEvenDigit(int[] input) {
+		
+		
+		
 		int count = 0;
 		for (int ele : input) {
 			if (res(ele) % 2 == 0) {
@@ -28,6 +31,11 @@ public class LSAEvenDigitNumbers {
 	}
 
 	static int countDigitsOfNumber(int num) {
+		
+		if(num<0) {
+			num=num * -1;  // if num is -ve then converting to +ve num
+		}
+		
 		int count = 0;
 		while (num > 0) {
 			count++;
